@@ -18,24 +18,15 @@
 
 .road__photo {
     position: fixed;
-    top: 50vw;
+    top: 45vh;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 2;
     background-image: url('@@assetPath@@/assets/images/photo.png');
     background-size: cover;
-    background-position: center bottom;
+    background-position: center top;
     background-repeat: no-repeat;
-
-    @include mq(tablet) {
-        background-size: 100%;
-        top: 0;
-    }
-
-    @media screen and (min-aspect-ratio: 10/7) {
-        bottom: -10vh;
-    }
 }
 
 .road__diamonds {
@@ -43,18 +34,17 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 30vh;
     background-repeat: no-repeat;
 
-    @media screen and (orientation: portrait) {
         background-image: url('@@assetPath@@/assets/images/diamonds--mobile.svg');
-        background-size: 134vw;
-        background-position: -25vw -28vw;
-    }
+        background-size: cover;
+        background-position: center bottom;
+    
 
-    @media screen and (orientation: landscape) {
-        background-size: 188vh;
-        background-position: center top -24vh;
+    @include mq(tablet) {
+        background-size: 160vw 132vh;
+        background-position: center bottom -34vh;
         background-image: url('@@assetPath@@/assets/images/diamonds.svg');
     }
 }
