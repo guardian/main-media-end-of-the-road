@@ -32,6 +32,10 @@
         background-size: 100%;
         top: 0;
     }
+
+    @media screen and (min-aspect-ratio: 10/7) {
+        bottom: -10vh;
+    }
 }
 
 .road__diamonds {
@@ -40,14 +44,18 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('@@assetPath@@/assets/images/diamonds.svg');
-    background-size: 210vw;
-    background-position: -43vw -30vw;
     background-repeat: no-repeat;
 
-    @include mq(tablet) {
-        background-size: 130vw;
-        background-position: center bottom 15vh;
+    @media screen and (orientation: portrait) {
+        background-image: url('@@assetPath@@/assets/images/diamonds--mobile.svg');
+        background-size: 134vw;
+        background-position: -25vw -28vw;
+    }
+
+    @media screen and (orientation: landscape) {
+        background-size: 188vh;
+        background-position: center top -24vh;
+        background-image: url('@@assetPath@@/assets/images/diamonds.svg');
     }
 }
 
